@@ -2,13 +2,13 @@
 
 **How much of today’s open pipeline is likely to win in the next 90 days?**
 
-Point-in-time pipeline reconstruction, forward revenue backtests and baseline comparison. Built for a revenue analytics portfolio using [Ledgerly](https://github.com/jungmarker/ledgerly-data), a fictional B2B SaaS business. All records are synthetic. This is a reproducible portfolio implementation, not a claim of deployed customer impact.
+Point-in-time pipeline reconstruction, forward revenue backtests and baseline comparison. Built for a revenue analytics portfolio using [Ledgerly](vendor/ledgerly-data/PROVENANCE.md), a fictional B2B SaaS business. All records are synthetic. This is a reproducible portfolio implementation, not a claim of deployed customer impact.
 
 ![Computed analysis preview](reports/chart.svg)
 
 ## Try it
 
-Python 3.11–3.14 and Git are required. Run from this repository’s root.
+Python 3.11 and Git are recommended. Run from this repository’s root.
 
 ```bash
 python3 -m venv .venv
@@ -38,6 +38,10 @@ Features are stage at cutoff, source, opportunity type, segment and age. Trainin
 
 **Measures:** Brier score and ROC-AUC versus a constant historical win-rate baseline, plus indicative expected pipeline dollars.
 
+## Seed-42 findings
+
+Across 508 held-out open-deal observations, mean Brier score is 0.1718 versus 0.2498 for the historical constant baseline. The comparison concerns 90-day win probabilities. Dollar estimates use unversioned deal amounts and have a separate limitation.
+
 ## Business interpretation
 
 Use the outputs to ask whether the decision is supportable, what could go wrong and which additional evidence would change the recommendation. The reports intentionally retain limitations and unsuccessful cases. Performance on generated data measures implementation behavior; it does not establish performance on a real employer’s data.
@@ -53,3 +57,10 @@ Historical amount versions do not exist. Dollar backtests use latest exported am
 ## Authorship
 
 Created for Nick Jungmarker’s portfolio with AI-assisted implementation. The commit history records the actual build; no backdated history or employer outcomes are claimed. Before presenting this as evidence of personal proficiency, reproduce it, review the design and be prepared to explain and modify the code. MIT license; the source generator is MIT licensed.
+
+## Related portfolio projects
+
+- [ledgerly-revenue-warehouse](https://github.com/jungmarker/ledgerly-revenue-warehouse)
+- [ledgerly-crm-resolution](https://github.com/jungmarker/ledgerly-crm-resolution)
+- [ledgerly-churn-radar](https://github.com/jungmarker/ledgerly-churn-radar)
+- [ledgerly-support-triage](https://github.com/jungmarker/ledgerly-support-triage)
