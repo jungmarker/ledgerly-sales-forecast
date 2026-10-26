@@ -1,0 +1,8 @@
+{
+  "heldout_deals": 508,
+  "mean_brier": 0.1718,
+  "baseline_brier": 0.2498,
+  "open_deals": 291,
+  "current_expected_value_USD": 7187932.26,
+  "training_rows": 1420
+}
